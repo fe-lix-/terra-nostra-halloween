@@ -1,70 +1,43 @@
 <html lang="ca">
-	<head>
-		    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <!-- Optional theme -->
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-<title>Halloween a Terra Nostra</title>
-	</head>
-	<body>
-		<!-- Display the countdown timer in an element -->
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <title>Halloween a Terra Nostra</title>
+    </head>
+    <body>
+        <!-- Display the countdown timer in an element -->
     <div class="container">
-    <div class="jumbotron text-center">
-        <h1>Halloween a Terra Nostra</h1>
-		<p class="lead">queda molt poc<p>
-		<p id="demo"></p>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-6 text-center">
-            <img src="/avv-alameda.jpeg" class="img-fluid rounded text-center" height="50%" />
-            <img src="/avv-alzina.jpeg" class="img-fluid" height="20%"/>
-            <img src="/avv-avv.jpeg" class="img-fluid" height="30%"/>
+        <div class="jumbotron text-center">
+            <img><h1>Halloween a Terra Nostra</h1>
+            <p class="lead">queda molt poc<p>
+            <p id="demo"></p>
         </div>
-        <div class="col-lg-6 text-center">
-            <img src="/avv-cantina.jpeg" class="img-fluid" height="30%"/>
-            <img src="/avv-jara.jpeg" class="img-fluid" height="40%"/>
-            <img src="/avv-merka.jpeg" class="img-fluid" height="30%"/>
+
+
+        <div class="row text-center">
+            <div class="container-sm">
+                <h2>Moltes gràcies als nostres patrocinadors!</h2>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="/avv-alameda.jpeg" class="img-fluid rounded text-center" height="50%" />
+                <img src="/avv-alzina.jpeg" class="img-fluid" height="20%"/>
+                <img src="/avv-avv.jpeg" class="img-fluid" height="30%"/>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="/avv-cantina.jpeg" class="img-fluid" height="30%"/>
+                <img src="/avv-jara.jpeg" class="img-fluid" height="40%"/>
+                <img src="/avv-merka.jpeg" class="img-fluid" height="30%"/>
+            </div>
         </div>
     </div>
-    </div>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Oct 31, 2022 18:30:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + " dies " + hours + " hores "
-  + minutes + "minuts " + seconds + "segons ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-	</body>
+    <script src="countdown.js"></script>
+    </body>
 </html>
