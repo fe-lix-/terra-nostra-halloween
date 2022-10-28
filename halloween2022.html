@@ -16,18 +16,6 @@
         <!-- Display the countdown timer in an element -->
     <div class="container">
 
-        <div class="row text-center">
-            <div class="col-lg-4 text-center">
-                <img src="/patrocinadors/small/avv-alzina.jpeg" class="img-fluid" >
-            </div>
-            <div class="col-lg-4 text-center">
-                <img src="/patrocinadors/small/avv-merka.jpeg" class="img-fluid"/>
-            </div>
-            <div class="col-lg-4 text-center">
-                <img src="/patrocinadors/small/avv-cantina.jpeg" class="img-fluid" />
-            </div>
-        </div>
-
         <div class="jumbotron text-center">
             <img><h1>Halloween a Terra Nostra</h1>
             <p class="lead">queda molt poc<p>
@@ -35,19 +23,22 @@
         </div>
 
 
-        <div class="row text-center">
+        <div class="row text-center" id="sponsors">
             <div class="container-sm">
                 <h2>Moltes gràcies als nostres patrocinadors!</h2>
             </div>
             <div class="col-lg-4 text-center">
+                <img src="/patrocinadors/small/avv-alzina.jpeg" class="img-fluid" >
                 <img src="/patrocinadors/small/avv-alameda.jpeg" class="img-fluid rounded"  />
                 <img src="/patrocinadors/small/avv-avv.jpeg" class="img-fluid"/>
             </div>
             <div class="col-lg-4 text-center">
+                <img src="/patrocinadors/small/avv-merka.jpeg" class="img-fluid"/>
                 <img src="/patrocinadors/small/avv-jara.jpeg" class="img-fluid" />
                 <img src="/patrocinadors/small/avv-irelarte.jpeg" class="img-fluid"  />
             </div>
             <div class="col-lg-4 text-center">
+                <img src="/patrocinadors/small/avv-cantina.jpeg" class="img-fluid" />
                 <img src="/patrocinadors/small/avv-vinsind.jpeg" class="img-fluid" />
                 <img src="/patrocinadors/small/avv-raima.jpeg" class="img-fluid" />
                 <img src="/patrocinadors/small/avv-inveractiva.jpeg" class="img-fluid"  />
@@ -55,5 +46,33 @@
         </div>
     </div>
     <script src="countdown.js"></script>
+    <script>
+        function shuffle(array) {
+            let currentIndex = array.length,  randomIndex;
+
+            // While there remain elements to shuffle.
+            while (currentIndex != 0) {
+
+                // Pick a remaining element.
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // And swap it with the current element.
+                [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+            }
+
+            return array;
+        }
+
+        function updateImage(image, idx) {
+            image.src = "/patrocinadors/small/avv-" + shuffled_sponsors[idx] + ".jpeg"
+        }
+
+        var sponsors = ["alzina", "alameda", "avv", "merka", "jara", "irelarte", "cantina", "vinsind", "raima", "inveractiva"];
+        var shuffled_sponsors = shuffle(sponsors);
+        var images = document.getElementById("sponsors").querySelectorAll("img");
+        images.forEach(updateImage)
+    </script>
     </body>
 </html>
