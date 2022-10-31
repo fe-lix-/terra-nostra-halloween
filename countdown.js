@@ -21,7 +21,7 @@ function updateCountdown() {
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "<a href='https://google.com'>La mapa esta aqui</a>";
+        document.getElementById("demo").innerHTML = "<h1><a href='https://bit.ly/3Rqhwew'>El mapa és aquí!</a></h1>";
     }
 }
 
