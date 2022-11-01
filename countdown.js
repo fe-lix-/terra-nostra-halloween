@@ -1,5 +1,6 @@
 // Set the date we're counting down to
 var countDownDate = new Date("Oct 31, 2022 18:30:00").getTime();
+var countDownDateOver = new Date("Oct 31, 2022 21:00:00").getTime();
 
 
 function updateCountdown() {
@@ -8,6 +9,8 @@ function updateCountdown() {
     
     // Find the distance between now and the count down date
     var distance = countDownDate - now;
+
+    var distanceToOver = countDownDateOver - now;
     
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -22,6 +25,11 @@ function updateCountdown() {
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "<h1><a href='https://bit.ly/3Rqhwew'>El mapa és aquí!</a></h1>";
+    }
+
+    if (distanceToOver < 0 ) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "<h1>Ya s'ha acabat! Moltes gràcies per participar</h1>";
     }
 }
 
