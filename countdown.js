@@ -1,6 +1,6 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 31, 2022 18:30:00").getTime();
-var countDownDateOver = new Date("Oct 31, 2022 21:00:00").getTime();
+var countDownDate = new Date("Oct 31, 2023 18:00:00").getTime();
+var countDownDateOver = new Date("Oct 31, 2023 20:30:00").getTime();
 
 
 function updateCountdown() {
@@ -29,7 +29,7 @@ function updateCountdown() {
 
     if (distanceToOver < 0 ) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "<h1>Ya s'ha acabat! Moltes gràcies per participar</h1>";
+        document.getElementById("demo").innerHTML = "<h2>Ya s'ha acabat! Moltes gràcies per participar!</h2>";
     }
 }
 
