@@ -1,6 +1,6 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 31, 2023 18:00:00").getTime();
-var countDownDateOver = new Date("Oct 31, 2023 20:30:00").getTime();
+var countDownDate = new Date("Oct 31, 2024 17:30:00").getTime();
+var countDownDateOver = new Date("Oct 31, 2024 20:00:00").getTime();
 
 
 function updateCountdown() {
