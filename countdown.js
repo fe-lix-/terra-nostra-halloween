@@ -28,7 +28,7 @@ function updateCountdown() {
 
     if (distanceToOver < 0 ) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "<h2>Ya s'ha acabat! Moltes gràcies per participar!</h2>";
+        document.getElementById("demo").innerHTML = "<h2>Ja s'ha acabat! Moltes gràcies per participar!</h2>";
     }
 }
 
