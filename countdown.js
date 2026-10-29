@@ -1,6 +1,6 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 31, 2025 18:00:00").getTime();
-var countDownDateOver = new Date("Oct 31, 2025 20:30:00").getTime();
+var countDownDate = new Date("Oct 31, 2026 18:00:00").getTime();
+var countDownDateOver = new Date("Oct 31, 2026 20:30:00").getTime();
 
 
 function updateCountdown() {
@@ -23,8 +23,7 @@ function updateCountdown() {
     
     // If the count down is finished, write some text
     if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "<h1><a href='https://www.google.com/maps/d/u/0/viewer?mid=1Ol8hsEgX7gZgR4YzFEVLvx5j2K42UOw&ll=41.4818644056667%2C2.169532004322696&z=17>El mapa és aquí!</a></h1>";
+        document.getElementById("demo").innerHTML = "<h1><a href='https://www.google.com/maps/d/u/0/viewer?mid=14a-eRqsJX-GH5EaGuWCuK2Ny0J6IGBw&ll=41.48289183789237%2C2.165938900509654&z=17'>El mapa és aquí!</a></h1>";
     }
 
     if (distanceToOver < 0 ) {
